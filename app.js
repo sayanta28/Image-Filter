@@ -60,5 +60,11 @@ function renderEffect(effect) {
     console.log('DONE! ');
 }
 
+$('#btn_download').click( function () {
+        let test = $('#new_img2').attr('src');
+        $('#test').append(`<a class="text-danger" href = ${test} download="test.jpg"><strong style="font-size: large;">Download Link</strong></a>`);
+});
+
+
 // willow, moon, dogpatch
 
