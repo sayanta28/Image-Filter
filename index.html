@@ -1,60 +1,73 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>Instagram Image Filter</title>
-    </head>
-    <body style="background-color: #ada7a7;">
-        <div class="container-fluid">
-            <h1 class="text-yellow text-center">Instagram Image Filter System</h1>
-            <hr>      
-            <div class="row">
-                <div class="col">
-                    <form>
-                        <div class="d-flex justify-content-center">
-                            <label for="image_inputs" class="mr-2">Image Input:</label>
-                            <input id="image_input" style="width: 400px;" class="form-control-file" type="file" onchange="document.getElementById('new_img').src = window.URL.createObjectURL(this.files[0])">
-                        </div>
-                    </form>
-                    <br>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <img id="new_img" class="text-center img-fluid rounded mx-auto d-block" alt="Image" width="100%"/>
-                <p class="">Original</p>
-              </div>
-              <div class="col-6">
-                <img id="new_img2" class="text-center img-fluid rounded mx-auto d-block" alt="Image" width="100%"/>
-                <p>With Effect</p>
-              </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <div id = "test" class="text-center" >
-                        <button id="btn_normal" type="button" data-effect="normal" class="btn btn-info">Normal Effect</button>
-                        <button id="btn_xpro2" type="button" data-effect="xpro2" class="btn btn-info">Xpro2 Effect</button>
-                        <button id="btn_willow" type="button" data-effect="willow" class="btn btn-info">Willow Effect</button>
-                        <button id="btn_walden" type="button" data-effect="walden" class="btn btn-info">Moon Efefct</button>
-                        <button id="btn_dogpatch" type="button" data-effect="dogpatch" class="btn btn-info">Dogpatch Effect</button>
-                        <button id="btn_skyline" type="button" data-effect="skyline" class="btn btn-info">Skyline Effect</button>
-                        <button id="btn_download" type="button" data-effect="download" class="btn btn-info">Download</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-        <script src="library\filterous2.min.js"></script>
-        <script src="app.js"></script>
-    </body> 
-</html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Instagram Image Filter</title>
+</head>
+
+<body style="background-color: #ada7a7;">
+    <div class="container-fluid">
+        <h1 class="text-yellow text-center">Instagram Image Filter System</h1>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="d-flex justify-content-center">
+                        <label for="image_inputs" class="mr-2">Image Input:</label>
+                        <input id="image_input" style="width: 400px;" class="form-control-file" type="file"
+                            onchange="document.getElementById('new_img').src = window.URL.createObjectURL(this.files[0])">
+                    </div>
+                </form>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img id="new_img" class="text-center img-fluid rounded mx-auto d-block" alt="Image" width="100%" />
+                <p class="">Original</p>
+            </div>
+            <div class="col-6">
+                <img id="new_img2" class="text-center img-fluid rounded mx-auto d-block" alt="Image" width="100%" />
+                <p>With Effect</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div id="test" class="text-center">
+                    <button id="btn_normal" type="button" data-effect="normal" class="btn btn-info">Normal
+                        Effect</button>
+                    <button id="btn_xpro2" type="button" data-effect="xpro2" class="btn btn-info">Xpro2 Effect</button>
+                    <button id="btn_willow" type="button" data-effect="willow" class="btn btn-info">Willow
+                        Effect</button>
+                    <button id="btn_walden" type="button" data-effect="walden" class="btn btn-info">Moon Efefct</button>
+                    <button id="btn_dogpatch" type="button" data-effect="dogpatch" class="btn btn-info">Dogpatch
+                        Effect</button>
+                    <button id="btn_skyline" type="button" data-effect="skyline" class="btn btn-info">Skyline
+                        Effect</button>
+                    <button id="btn_download" type="button" data-effect="download"
+                        class="btn btn-info">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="library\filterous2.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
